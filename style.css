@@ -490,3 +490,51 @@ CSS
   background-image: linear-gradient(-45deg, #fd7500, #8fd162, #00B0F0); /* Updated color here */
   background-position: 100% 50%;
 }
+
+
+/* Custom button styles */
+.custom-btn {
+  display: inline-block;
+  padding: 15px 30px; /* Increased padding for larger button */
+  border: 2px solid #000; /* Black border by default */
+  color: #000; /* Default black text color */
+  background-color: #fff; /* Default white background */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease-in-out; /* Smooth transition effects */
+  position: relative; /* Enable positioning for the gradient line */
+}
+
+.custom-btn:hover {
+  color: #fff; /* Text color changes to white on hover */
+  background-color: #000; /* Background color changes to black on hover */
+}
+
+.custom-btn:hover::after {  /* Create the hover gradient line */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent, #fff, transparent); /* White gradient line */
+  transition: all 0.3s ease-in-out; /* Smooth transition for the line */
+}
+
+.custom-btn:hover::after {  /* Animate the gradient line on hover */
+  animation: hoverGradient 0.5s ease-in-out forwards;
+}
+
+@keyframes hoverGradient {
+  from { transform: translateX(-100%); } /* Start from left */
+  to { transform: translateX(0); } /* Move to right on hover */
+}
+
+/* Centering the call-to-action section */
+#call-to-action {
+  text-align: center; /* Center the content within the section */
+  position: absolute; /* Make the section absolute for positioning */
+  top: 50%; /* Position vertically at 50% */
+  left: 50%; /* Position horizontally at 50% */
+  transform: translate(-50%, -50%); /* Center the section based on its own size */
+}
