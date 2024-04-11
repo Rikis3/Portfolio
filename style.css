@@ -442,6 +442,9 @@ footer p {
 
 /* Default styles for experience containers */
 /* Default styles for experience containers */
+Here's the updated code with the container 2 hover gradient changed to a gradient of #00B0F0:
+
+CSS
 .experience-container {
   background-color: #fff;
   padding: 20px;
@@ -484,6 +487,6 @@ footer p {
 
 /* Container 2 hover gradient */
 .experience-container:nth-child(2):hover {
-  background-image: linear-gradient(-45deg, #fd7500, #8fd162, #50c5f6);
+  background-image: linear-gradient(-45deg, #fd7500, #8fd162, #00B0F0); /* Updated color here */
   background-position: 100% 50%;
 }
